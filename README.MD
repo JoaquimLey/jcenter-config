@@ -7,7 +7,7 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 
 ##How to use
 
-- Copy the `deploy.properties` file to the **root** of your project, and change to your own settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
+- Copy the `deploy.properties` file to the **root** of your project, and **change to your own** settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
 
 - Add the following lines to your `.gitignore` to **prevent exposing sensitive data** to your repository
 
@@ -35,7 +35,10 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 		}
 
 
-- On your **library module** (you wish to publish) `build.gradle` add the following **before** the `android{}` closure:
+- Copy the `deploy.gradle`([RAW](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties)) file to the **module you wish to publish**.
+
+
+- On your **library module's** `build.gradle` add the following **before** the `android{}` closure:
 
 		apply plugin: 'com.android.library'
 		apply plugin: 'com.github.dcendents.android-maven'
@@ -49,18 +52,20 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 
 - Finally **at the end** of the same library module `gradle.build` add:
 
-		apply from: 'https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.gradle'
-
+		apply from: 'deploy.gradle'
+		
+		
+### To publish run on your terminal
+	./gradlew libraryModuleName:bintrayUpload
 
 
 
 ## Contributing
-
-**Issues:**
-Fell free and it's encoraged to open a new issues follow the [ISSUE_TEMPLATE.MD](../development/ISSUE_TEMPLATE.MD)
-
 Contributions are always welcome!
 Follow the "fork-and-pull" Git workflow.
+
+**Issues:**
+It's encoraged to open a unreported issues.
 
  1. **Fork** the repo on GitHub
  2. **Clone** the project to your own machine
