@@ -33,8 +33,8 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 		        jcenter()
 		    }
 		}
-
-- On your **library module's (you wish to publish)** `build.gradle` add the following **before** the `android{}` closure:
+		
+- On your **library module's** `build.gradle` add the following **before** the `android{}` closure:
 
 		apply plugin: 'com.android.library'
 		apply plugin: 'com.github.dcendents.android-maven'
@@ -53,6 +53,8 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 		
 ### To publish run on your terminal
 	./gradlew clean libraryModuleName:bintrayUpload
+	
+Clean is optional but recommended.
 
 ## Contributing
 Contributions are always welcome!
