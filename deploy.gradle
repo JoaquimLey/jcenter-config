@@ -32,7 +32,7 @@ group = properties.getProperty('group')
 version = properties.getProperty('version')
 
 bintray {
-    user = properties.getProperty('bintray.user')
+    user = properties.getProperty('bintray.userBREAK')
     key = properties.getProperty('bintray.apikey')
     dryRun = properties.getProperty('bintray.dryRun')
     publish = properties.getProperty('bintray.publish')
