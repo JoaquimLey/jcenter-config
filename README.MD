@@ -7,9 +7,9 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 
 ##How to use
 
-- Copy the `deploy.properties` file to the **root** of your project, and change to your own settings (this is a _config_ file) [COPY HERE]()
+- Copy the `deploy.properties` file to the **root** of your project, and change to your own settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
 
-- Add the following lines to your `.gitignore` to **prevent** exposing sensitive data to your repository
+- Add the following lines to your `.gitignore` to **prevent exposing sensitive data** to your repository
 
 		# Local configuration file (sdk path, etc)
 		deploy.properties
@@ -35,7 +35,7 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 		}
 
 
-- On your **library module** (you wish to publish) `build.gradle` add the following lines **before** the `android{}` closure:
+- On your **library module** (you wish to publish) `build.gradle` add the following **before** the `android{}` closure:
 
 		apply plugin: 'com.android.library'
 		apply plugin: 'com.github.dcendents.android-maven'
@@ -47,7 +47,9 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 		    ...
 		}
 
-- Still in the same library module `gradle.build` add **at the end** of your file.
+- Finally **at the end** of the same library module `gradle.build` add:
+
+		apply from: 'https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.gradle'
 
 
 
@@ -73,6 +75,7 @@ Follow the "fork-and-pull" Git workflow.
 
 I'm writing a blog post about this process, incldugin a step-by-step guide. In the meantimefor some reason still unable to publish you can or if you have any questions or always find me on [twitter](https://twitter.com/JoaquimLey).
 
+You can also find the official example [here](https://github.com/itamarb/bintray-examples/blob/master/gradle-example/build.gradle).
 
 ### License
 

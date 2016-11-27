@@ -34,6 +34,8 @@ version = properties.getProperty('version')
 bintray {
     user = properties.getProperty('bintray.user')
     key = properties.getProperty('bintray.apikey')
+    dryRun = properties.getProperty('bintray.dryRun')
+    publish = properties.getProperty('bintray.publish')
     configurations = ['archives'] //When uploading configuration files
     pkg {
         repo = properties.getProperty('repo')
