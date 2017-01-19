@@ -7,12 +7,12 @@ Painlessly publish your library/project to jcenter() with these simple scripts.
 
 ##How to use
 
-- Copy the `deploy.properties` file to the **root** of your project, and **change to your own** settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
+- Copy/Add configs from the `deploy.properties` file to your **local.properties** file of your project, and **change to your own** settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
 
 - Add the following lines to your `.gitignore` to **prevent exposing sensitive data** to your repository
 
 		# Local configuration file (sdk path, etc)
-		deploy.properties
+		local.properties
 
 - On your **project** (root) `build.gradle` add the following lines:
 
