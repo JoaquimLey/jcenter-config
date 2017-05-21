@@ -1,11 +1,11 @@
-#jcenter-Configs
+# jcenter-Config
 
 
 Painlessly publish your library/project to jcenter() with these simple scripts.
 
-###Read more on the blog post: < WIP-Soon >
+### Read more on the blog post: < WIP-Soon >
 
-##How to use
+## How to use
 
 - Copy/Add configs from the `deploy.properties` file to your **local.properties** file of your project, and **change to your own** settings (this is a _config_ file) [COPY HERE](https://raw.githubusercontent.com/JoaquimLey/jcenter-config/master/deploy.properties). You can find some examples/hints in the comments, but it's pretty straightforward.
 
